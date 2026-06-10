@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKSPI - Nowoczesne Projekty</title>
+    <style>
+        /* Reset i zmienne */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #3b82f6;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        /* Styl globalny */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Nawigacja */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #334155;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-main);
+            letter-spacing: 1px;
+        }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Sekcja główna (Hero) */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            background-color: #2563eb;
+        }
+
+        /* Sekcja Oferta/Projekty */
+        .features {
+            padding: 5rem 10%;
+            background: #111827;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-bottom: 0.5rem; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Stopka */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+        }
+
+        /* Responsywność */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nawigacja -->
+    <nav>
+        <div class="logo">MAKS<span>PI</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Start</a></li>
+            <li><a href="#features">O nas</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sekcja Główna -->
+    <section class="hero" id="home">
+        <h1>Nowa Era MAKSPI</h1>
+        <p>Tworzymy zaawansowane, nowoczesne i szybkie rozwiązania internetowe. Zobacz, jak możemy rozwinąć Twój projekt.</p>
+        <a href="#features" class="btn">Poznaj szczegóły</a>
+    </section>
+
+    <!-- Sekcja Cechy/Oferta -->
+    <section class="features" id="features">
+        <h2 class="section-title">Co nas wyróżnia?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Szybkość działania</h3>
+                <p>Zoptymalizowany kod HTML i CSS gwarantuje błyskawiczne ładowanie strony na każdym urządzeniu.</p>
+            </div>
+            <div class="card">
+                <h3>Nowoczesny Design</h3>
+                <p>Minimalistyczny wygląd z ciemnym motywem dostosowany do obecnych trendów UI/UX.</p>
+            </div>
+            <div class="card">
+                <h3>Wsparcie Netlify</h3>
+                <p>Struktura kodu idealnie przygotowana pod darmowy, stabilny hosting i szybkie wdrożenia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer>
+        <p>&copy; 2026 MAKSPI. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+</html>
